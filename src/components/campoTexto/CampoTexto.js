@@ -1,13 +1,16 @@
 import React from 'react';
 import './CampoTexto.css';
-function CampoTexto() {
+function CampoTexto(props) {
+  console.log(props.titulo);
+  const Etiqueta = props.titulo;
+  const Placeholder = `${props.placeholder}...`;
   return (
     <div
     className='campo-texto'
     >
-      <label>Nombre</label>
+      <label>{Etiqueta}</label>
       <input
-      placeholder='Ingresar Nombre'
+      placeholder={Placeholder}
       required
       />
     </div>
