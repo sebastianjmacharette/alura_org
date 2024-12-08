@@ -2,6 +2,7 @@ import React from 'react';
 import './CampoTexto.css';
 function CampoTexto(props) {
   console.log(props.titulo);
+
   const Etiqueta = props.titulo;
   const Placeholder = `${props.placeholder}...`;
   return (
@@ -11,7 +12,7 @@ function CampoTexto(props) {
       <label>{Etiqueta}</label>
       <input
       placeholder={Placeholder}
-      required
+     required={props.required}
       />
     </div>
   )
